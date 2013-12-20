@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class ThirdPartyCallbacksController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/third_party_callbacks_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-lr_create_from_sci">#lr_create_from_sci</a>
+    
+    <li><a href="#method-i-lr_transfer_fail">#lr_transfer_fail</a>
+    
+    <li><a href="#method-i-lr_transfer_success">#lr_transfer_success</a>
+    
+    <li><a href="#method-i-px_cancel">#px_cancel</a>
+    
+    <li><a href="#method-i-px_payment">#px_payment</a>
+    
+    <li><a href="#method-i-px_status">#px_status</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Admin.html">Admin</a>
+  
+    <li><a href="./Admin/AccountOperationsController.html">Admin::AccountOperationsController</a>
+  
+    <li><a href="./Admin/AccountOperationsHelper.html">Admin::AccountOperationsHelper</a>
+  
+    <li><a href="./Admin/AdminController.html">Admin::AdminController</a>
+  
+    <li><a href="./Admin/AnnouncementsController.html">Admin::AnnouncementsController</a>
+  
+    <li><a href="./Admin/AnnouncementsHelper.html">Admin::AnnouncementsHelper</a>
+  
+    <li><a href="./Admin/CurrenciesController.html">Admin::CurrenciesController</a>
+  
+    <li><a href="./Admin/CurrenciesHelper.html">Admin::CurrenciesHelper</a>
+  
+    <li><a href="./Admin/InformationsController.html">Admin::InformationsController</a>
+  
+    <li><a href="./Admin/InformationsHelper.html">Admin::InformationsHelper</a>
+  
+    <li><a href="./Admin/PendingTransfersController.html">Admin::PendingTransfersController</a>
+  
+    <li><a href="./Admin/PendingTransfersHelper.html">Admin::PendingTransfersHelper</a>
+  
+    <li><a href="./Admin/StaticPagesController.html">Admin::StaticPagesController</a>
+  
+    <li><a href="./Admin/StaticPagesHelper.html">Admin::StaticPagesHelper</a>
+  
+    <li><a href="./Admin/TicketsController.html">Admin::TicketsController</a>
+  
+    <li><a href="./Admin/TicketsHelper.html">Admin::TicketsHelper</a>
+  
+    <li><a href="./Admin/UsersController.html">Admin::UsersController</a>
+  
+    <li><a href="./Admin/UsersHelper.html">Admin::UsersHelper</a>
+  
+    <li><a href="./Admin/YubikeysController.html">Admin::YubikeysController</a>
+  
+    <li><a href="./Admin/YubikeysHelper.html">Admin::YubikeysHelper</a>
+  
+    <li><a href="./Devise.html">Devise</a>
+  
+    <li><a href="./Devise/Models.html">Devise::Models</a>
+  
+    <li><a href="./Devise/Models/GaOtpAuthenticatable.html">Devise::Models::GaOtpAuthenticatable</a>
+  
+    <li><a href="./Devise/Models/YkOtpAuthenticatable.html">Devise::Models::YkOtpAuthenticatable</a>
+  
+    <li><a href="./Devise/Strategies.html">Devise::Strategies</a>
+  
+    <li><a href="./Devise/Strategies/GaOtpAuthenticatable.html">Devise::Strategies::GaOtpAuthenticatable</a>
+  
+    <li><a href="./Devise/Strategies/YkOtpAuthenticatable.html">Devise::Strategies::YkOtpAuthenticatable</a>
+  
+    <li><a href="./Bitcoin.html">Bitcoin</a>
+  
+    <li><a href="./Bitcoin/Client.html">Bitcoin::Client</a>
+  
+    <li><a href="./Bitcoin/JsonWrapper.html">Bitcoin::JsonWrapper</a>
+  
+    <li><a href="./Bitcoin/Util.html">Bitcoin::Util</a>
+  
+    <li><a href="./Yubico.html">Yubico</a>
+  
+    <li><a href="./Yubico/Client.html">Yubico::Client</a>
+  
+    <li><a href="./Yubico/ReplayedOTPError.html">Yubico::ReplayedOTPError</a>
+  
+    <li><a href="./LibertyReserve.html">LibertyReserve</a>
+  
+    <li><a href="./LibertyReserve/Client.html">LibertyReserve::Client</a>
+  
+    <li><a href="./Account.html">Account</a>
+  
+    <li><a href="./AccountOperation.html">AccountOperation</a>
+  
+    <li><a href="./AccountsController.html">AccountsController</a>
+  
+    <li><a href="./AccountsHelper.html">AccountsHelper</a>
+  
+    <li><a href="./Announcement.html">Announcement</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./BackupMailer.html">BackupMailer</a>
+  
+    <li><a href="./BankAccount.html">BankAccount</a>
+  
+    <li><a href="./BankAccountsController.html">BankAccountsController</a>
+  
+    <li><a href="./BankAccountsHelper.html">BankAccountsHelper</a>
+  
+    <li><a href="./BitcoinAddressValidator.html">BitcoinAddressValidator</a>
+  
+    <li><a href="./BitcoinTransfer.html">BitcoinTransfer</a>
+  
+    <li><a href="./BlankValidator.html">BlankValidator</a>
+  
+    <li><a href="./Comment.html">Comment</a>
+  
+    <li><a href="./CommentsController.html">CommentsController</a>
+  
+    <li><a href="./CommentsHelper.html">CommentsHelper</a>
+  
+    <li><a href="./Currency.html">Currency</a>
+  
+    <li><a href="./IbanValidator.html">IbanValidator</a>
+  
+    <li><a href="./InformationsController.html">InformationsController</a>
+  
+    <li><a href="./InformationsHelper.html">InformationsHelper</a>
+  
+    <li><a href="./Invoice.html">Invoice</a>
+  
+    <li><a href="./InvoicesController.html">InvoicesController</a>
+  
+    <li><a href="./InvoicesHelper.html">InvoicesHelper</a>
+  
+    <li><a href="./LibertyReserveTransfer.html">LibertyReserveTransfer</a>
+  
+    <li><a href="./LimitOrder.html">LimitOrder</a>
+  
+    <li><a href="./Lockfile.html">Lockfile</a>
+  
+    <li><a href="./Manager.html">Manager</a>
+  
+    <li><a href="./MarketOrder.html">MarketOrder</a>
+  
+    <li><a href="./MaximalAmountValidator.html">MaximalAmountValidator</a>
+  
+    <li><a href="./MinimalAmountValidator.html">MinimalAmountValidator</a>
+  
+    <li><a href="./MinimalOrderAmountValidator.html">MinimalOrderAmountValidator</a>
+  
+    <li><a href="./MinimalOrderPpcValidator.html">MinimalOrderPpcValidator</a>
+  
+    <li><a href="./NegativeValidator.html">NegativeValidator</a>
+  
+    <li><a href="./NotMineValidator.html">NotMineValidator</a>
+  
+    <li><a href="./Operation.html">Operation</a>
+  
+    <li><a href="./QrcodesController.html">QrcodesController</a>
+  
+    <li><a href="./QrcodesHelper.html">QrcodesHelper</a>
+  
+    <li><a href="./RegistrationsController.html">RegistrationsController</a>
+  
+    <li><a href="./RegistrationsHelper.html">RegistrationsHelper</a>
+  
+    <li><a href="./StaticPage.html">StaticPage</a>
+  
+    <li><a href="./StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
+  
+    <li><a href="./ThirdPartyCallbacksController.html">ThirdPartyCallbacksController</a>
+  
+    <li><a href="./Ticket.html">Ticket</a>
+  
+    <li><a href="./TicketMailer.html">TicketMailer</a>
+  
+    <li><a href="./TicketsController.html">TicketsController</a>
+  
+    <li><a href="./TicketsHelper.html">TicketsHelper</a>
+  
+    <li><a href="./Trade.html">Trade</a>
+  
+    <li><a href="./TradeOrder.html">TradeOrder</a>
+  
+    <li><a href="./TradeOrdersController.html">TradeOrdersController</a>
+  
+    <li><a href="./TradeOrdersHelper.html">TradeOrdersHelper</a>
+  
+    <li><a href="./TradesController.html">TradesController</a>
+  
+    <li><a href="./TradesHelper.html">TradesHelper</a>
+  
+    <li><a href="./Transfer.html">Transfer</a>
+  
+    <li><a href="./TransfersController.html">TransfersController</a>
+  
+    <li><a href="./TransfersHelper.html">TransfersHelper</a>
+  
+    <li><a href="./UrlValidator.html">UrlValidator</a>
+  
+    <li><a href="./UsedCurrency.html">UsedCurrency</a>
+  
+    <li><a href="./User.html">User</a>
+  
+    <li><a href="./UserBalanceValidator.html">UserBalanceValidator</a>
+  
+    <li><a href="./UserMailer.html">UserMailer</a>
+  
+    <li><a href="./UsersController.html">UsersController</a>
+  
+    <li><a href="./UsersHelper.html">UsersHelper</a>
+  
+    <li><a href="./WireTransfer.html">WireTransfer</a>
+  
+    <li><a href="./Yubikey.html">Yubikey</a>
+  
+    <li><a href="./YubikeysController.html">YubikeysController</a>
+  
+    <li><a href="./YubikeysHelper.html">YubikeysHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ThirdPartyCallbacksController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-lr_create_from_sci" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lr_create_from_sci</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Liberty Reserve callback</p>
+          
+
+          
+          <div class="method-source-code" id="lr_create_from_sci-source">
+            <pre><span class="ruby-comment"># File app/controllers/third_party_callbacks_controller.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lr_create_from_sci</span>
+  <span class="ruby-identifier">lr_fields</span> = <span class="ruby-node">%w{lr_paidto lr_paidby lr_amnt lr_fee_amnt lr_currency lr_transfer lr_store lr_timestamp lr_merchant_ref lr_encrypted lr_encrypted2 account_id}</span>
+
+  <span class="ruby-ivar">@lr_confirmation</span> = {}
+  <span class="ruby-identifier">lr_fields</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@lr_confirmation</span>[<span class="ruby-identifier">f</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">f</span>].<span class="ruby-identifier">to_s</span> }
+  
+  <span class="ruby-constant">LibertyReserveTransfer</span>.<span class="ruby-identifier">create_from_lr_post!</span>(<span class="ruby-ivar">@lr_confirmation</span>)
+
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- lr_create_from_sci-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lr_create_from_sci-method -->
+
+    
+      <div id="method-i-lr_transfer_fail" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lr_transfer_fail</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="lr_transfer_fail-source">
+            <pre><span class="ruby-comment"># File app/controllers/third_party_callbacks_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lr_transfer_fail</span>
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:lr_transfer_failure</span>, <span class="ruby-value">:amount</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:lr_amnt</span>], <span class="ruby-value">:currency</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:lr_currency</span>])
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">account_transfers_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- lr_transfer_fail-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lr_transfer_fail-method -->
+
+    
+      <div id="method-i-lr_transfer_success" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lr_transfer_success</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Liberty Reserve bounce URLs</p>
+          
+
+          
+          <div class="method-source-code" id="lr_transfer_success-source">
+            <pre><span class="ruby-comment"># File app/controllers/third_party_callbacks_controller.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lr_transfer_success</span>
+  <span class="ruby-comment"># Following line costs an LR API call but won't explode if LR forgot to</span>
+  <span class="ruby-comment"># hit our callback URL when a user deposited some funds</span>
+  <span class="ruby-identifier">transfer</span> = <span class="ruby-constant">Transfer</span>.<span class="ruby-identifier">create_from_lr_transaction_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:lr_transfer</span>])
+
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">account_transfers_path</span>,
+    <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:lr_transfer_success</span>, <span class="ruby-value">:amount</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">transfer</span>.<span class="ruby-identifier">amount</span>, <span class="ruby-value">:currency</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:lr_currency</span>], <span class="ruby-value">:fee</span> =<span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">transfer</span>.<span class="ruby-identifier">lr_merchant_fee</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:lr_fee_amnt</span>].<span class="ruby-identifier">to_d</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- lr_transfer_success-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lr_transfer_success-method -->
+
+    
+      <div id="method-i-px_cancel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">px_cancel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Pecunix cancel callback</p>
+          
+
+          
+          <div class="method-source-code" id="px_cancel-source">
+            <pre><span class="ruby-comment"># File app/controllers/third_party_callbacks_controller.rb, line 35</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">px_cancel</span>
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:error</span>] = <span class="ruby-identifier">t</span>(<span class="ruby-value">:px_transfer_canceled</span>)
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">account_transfers_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- px_cancel-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- px_cancel-method -->
+
+    
+      <div id="method-i-px_payment" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">px_payment</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Pecunix success redirection URL</p>
+          
+
+          
+          <div class="method-source-code" id="px_payment-source">
+            <pre><span class="ruby-comment"># File app/controllers/third_party_callbacks_controller.rb, line 41</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">px_payment</span>
+  <span class="ruby-identifier">t</span> = <span class="ruby-constant">Transfer</span>.<span class="ruby-identifier">find_by_px_tx_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_REC_ID&quot;</span>])
+
+  <span class="ruby-identifier">redirect_to</span>(<span class="ruby-identifier">account_transfers_path</span>,
+    <span class="ruby-value">:notice</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>(<span class="ruby-value">:px_transfer_success</span>), <span class="ruby-value">:amount</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">amount</span>, <span class="ruby-value">:fee</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">px_fee</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- px_payment-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- px_payment-method -->
+
+    
+      <div id="method-i-px_status" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">px_status</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Pecunix success callback</p>
+          
+
+          
+          <div class="method-source-code" id="px_status-source">
+            <pre><span class="ruby-comment"># File app/controllers/third_party_callbacks_controller.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">px_status</span>
+  <span class="ruby-identifier">config</span> = <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">load</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>, <span class="ruby-string">&quot;config&quot;</span>, <span class="ruby-string">&quot;pecunix.yml&quot;</span>)))[<span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>]
+  
+  <span class="ruby-comment"># Check that the payee account is correct</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Payee account was different than the configured one&quot;</span> <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYEE_ACCOUNT&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">config</span>[<span class="ruby-string">&quot;account&quot;</span>])
+
+  <span class="ruby-comment"># Check that the payment units is GAU</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-string">&quot;Wrong payment units&quot;</span> <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_UNITS&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-string">&quot;GAU&quot;</span>)
+
+  <span class="ruby-comment"># Check payment hash</span>
+  <span class="ruby-identifier">px_data</span> = <span class="ruby-node">%w{PAYEE_ACCOUNT PAYMENT_AMOUNT PAYMENT_UNITS PAYER_ACCOUNT PAYMENT_REC_ID PAYMENT_GRAMS PAYMENT_ID PAYMENT_FEE TXN_DATETIME}</span>
+  <span class="ruby-identifier">px_data</span> = <span class="ruby-node">&quot;#{px_data.map{ |i| params[i] or &quot;&quot; }.join(&quot;:&quot;)}:#{config[&quot;secret&quot;]}&quot;</span>
+  <span class="ruby-identifier">px_hash</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA1</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">px_data</span>).<span class="ruby-identifier">upcase</span>
+
+  <span class="ruby-keyword">unless</span> (<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_HASH&quot;</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">px_hash</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Verification hash was wrong (hashed string : \&quot;#{px_hash}\&quot;, expected : \&quot;#{params[&quot;PAYMENT_HASH&quot;]}\&quot;)\nData : #{px_data}\&quot;&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># We want to make sure it is the first time the callback is called for this</span>
+  <span class="ruby-comment"># particular PGAU deposit (according to Pecunix docs, multiple calls are possible)</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-constant">AccountOperation</span>.<span class="ruby-identifier">find_by_px_tx_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_REC_ID&quot;</span>])
+    <span class="ruby-constant">Operation</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span> 
+      <span class="ruby-identifier">o</span> = <span class="ruby-constant">Operation</span>.<span class="ruby-identifier">create!</span>
+    
+      <span class="ruby-identifier">o</span>.<span class="ruby-identifier">account_operations</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">AccountOperation</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ao</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">account</span> = <span class="ruby-constant">User</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_ID&quot;</span>])
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">currency</span> = <span class="ruby-string">&quot;PGAU&quot;</span>
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">amount</span> = (<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_GRAMS&quot;</span>].<span class="ruby-identifier">to_d</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_FEE&quot;</span>].<span class="ruby-identifier">to_d</span>)
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">px_tx_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_REC_ID&quot;</span>]
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">px_payer</span> = <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYER_ACCOUNT&quot;</span>]
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">px_fee</span> = <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_FEE&quot;</span>].<span class="ruby-identifier">to_d</span>
+      <span class="ruby-keyword">end</span>
+    
+      <span class="ruby-identifier">o</span>.<span class="ruby-identifier">account_operations</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">AccountOperation</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ao</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">account</span> = <span class="ruby-constant">Account</span>.<span class="ruby-identifier">storage_account_for</span>(<span class="ruby-value">:pgau</span>)
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">currency</span> = <span class="ruby-string">&quot;PGAU&quot;</span>
+        <span class="ruby-identifier">ao</span>.<span class="ruby-identifier">amount</span> = <span class="ruby-operator">-</span>(<span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_GRAMS&quot;</span>].<span class="ruby-identifier">to_d</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">params</span>[<span class="ruby-string">&quot;PAYMENT_FEE&quot;</span>].<span class="ruby-identifier">to_d</span>)
+      <span class="ruby-keyword">end</span>
+    
+      <span class="ruby-identifier">o</span>.<span class="ruby-identifier">save!</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- px_status-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- px_status-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

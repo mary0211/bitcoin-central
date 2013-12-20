@@ -190,6 +190,7 @@ fr:
           lrusd: Dollar Liberty Reserve
           lreur: Euro Liberty Reserve
           pgau: Or Pecunix
+          krw: Korean WON
           btc: Bitcoin  
       ticket:
         states:

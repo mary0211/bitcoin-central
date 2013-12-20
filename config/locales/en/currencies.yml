@@ -26,3 +26,6 @@ en:
     usd:
       name: US Dollar
       link: http://www.federalreserve.gov/
+    krw:
+      name: Korean WON
+      link: http://www.korea.go.kr/
