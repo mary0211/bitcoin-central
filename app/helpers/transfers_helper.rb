@@ -21,9 +21,10 @@ module TransfersHelper
   end
   
   def color_for_transfer_state(state)
+	print state
     case state 
-    when "pending"    : "orange"
-    when "processed"  : "green"
+    when "pending"    then "orange"
+    when "processed"  then "green"
     end
   end
 end

@@ -1,7 +1,7 @@
 development:
   username: bitcoin-admin
-  password: 5MLpeupM46
-  url: http://localhost:8332/
+  password: dlrtmvnffldjs
+  url: http://ec000.expull.com:8332/
   donations: 1FXWhKPChEcUnSEoFQ3DGzxKe44MDbatz
   
 test:

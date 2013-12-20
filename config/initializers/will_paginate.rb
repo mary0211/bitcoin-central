@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module WillPaginate::I18nViewHelpers
   def will_paginate(collection, options = {})
     super(collection,

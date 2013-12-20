@@ -16,8 +16,9 @@ gem 'coffee-rails'
 gem 'recaptcha',
   :require => 'recaptcha/rails'
 
+#  :git => "git@github.com:rails/exception_notification.git",
 gem 'exception_notification',
-  :git => "git@github.com:rails/exception_notification.git",
+  :git => "https://github.com/rails/exception_notification.git",
   :require => 'exception_notifier'
 
 gem 'transitions',
